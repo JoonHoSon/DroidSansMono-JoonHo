@@ -2,9 +2,7 @@
 .appVersion = "3151";
 .formatVersion = 3;
 DisplayStrings = (
-"-<>",
-"<",
-">"
+"-_"
 );
 customParameters = (
 {
@@ -5658,7 +5656,7 @@ unicode = 94;
 },
 {
 glyphname = underscore;
-lastChange = "2023-02-13 05:49:13 +0000";
+lastChange = "2023-02-13 08:42:24 +0000";
 layers = (
 {
 layerId = m01;
@@ -5666,10 +5664,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(59,-184,l),
-(59,-324,l),
-(1168,-324,l),
-(1168,-184,l)
+(284,-184,l),
+(284,-324,l),
+(943,-324,l),
+(943,-184,l)
 );
 }
 );
