@@ -958,10 +958,120 @@ glyph00892,
 Tcedilla,
 tcedilla
 );
+},
+{
+name = isFixedPitch;
+value = 1;
 }
 );
 date = "2007-01-08 12:28:04 +0000";
 familyName = "Droid Sans Mono-JoonHo";
+featurePrefixes = (
+{
+automatic = 1;
+code = "languagesystem DFLT dflt;
+
+languagesystem latn dflt;
+languagesystem latn ROM;
+languagesystem latn MOL;
+languagesystem latn CAT;
+";
+name = Languagesystems;
+}
+);
+features = (
+{
+automatic = 1;
+code = "feature locl;
+feature sups;
+feature frac;
+feature ordn;
+";
+tag = aalt;
+},
+{
+automatic = 1;
+code = "lookup ccmp_Other_1 {
+	@CombiningTopAccents = [acutecomb dblgravecomb gravecomb hookabovecomb tildecomb];
+	@CombiningNonTopAccents = [dotbelowcomb];
+	sub [i]' @CombiningTopAccents by [idotless];
+	sub [i]' @CombiningNonTopAccents @CombiningTopAccents by [idotless];
+} ccmp_Other_1;
+
+lookup ccmp_latn_1 {
+	sub fi by f i;
+	sub fl by f l;
+} ccmp_latn_1;
+
+script latn;
+lookup ccmp_latn_1;
+";
+tag = ccmp;
+},
+{
+automatic = 1;
+code = "lookup locl_latn_0 {
+	script latn;
+	language ROM;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+	language MOL;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+} locl_latn_0;
+
+lookup locl_latn_1 {
+	script latn;
+	language CAT;
+	sub  l' periodcentered' l by ldot;
+	sub  L' periodcentered' L by Ldot;
+} locl_latn_1;
+";
+tag = locl;
+},
+{
+automatic = 1;
+code = "sub two by twosuperior;
+sub three by threesuperior;
+sub one by onesuperior;
+";
+tag = sups;
+},
+{
+automatic = 1;
+code = "sub one slash eight by oneeighth;
+sub one slash four by onequarter;
+sub three slash eight by threeeighths;
+sub one slash two by onehalf;
+sub five slash eight by fiveeighths;
+sub three slash four by threequarters;
+sub seven slash eight by seveneighths;
+";
+tag = frac;
+},
+{
+automatic = 1;
+code = "sub [zero one two three four five six seven eight nine] [A a]' by ordfeminine;
+sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
+sub N o period by numero;
+";
+tag = ordn;
+},
+{
+automatic = 1;
+code = "lookupflag IgnoreMarks;
+sub f f i by f_f_i;
+sub f f l by f_f_l;
+sub f i by fi;
+sub f l by fl;
+";
+tag = liga;
+}
+);
 fontMaster = (
 {
 customParameters = (
@@ -2187,7 +2297,7 @@ unicode = 47;
 },
 {
 glyphname = zero;
-lastChange = "2023-02-13 05:36:49 +0000";
+lastChange = "2023-08-07 11:45:37 +0000";
 layers = (
 {
 layerId = m01;
@@ -2195,23 +2305,30 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(1081,733,qs),
-(1081,1098,o),
-(844,1485,o),
-(612,1485,qs),
-(147,1485,o),
-(147,733,qs),
-(147,367,o),
-(383,-20,o),
-(612,-20,qs),
-(1081,-20,o)
+(208,384,l),
+(337,280,l),
+(1007,1126,l),
+(878,1230,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(332,415,o),
-(332,733,qs),
+(147,367,o),
+(383,-20,o),
+(612,-20,qs),
+(1081,-20,o),
+(1081,733,qs),
+(1081,1098,o),
+(844,1485,o),
+(612,1485,qs),
+(147,1485,o),
+(147,733,qs)
+);
+},
+{
+closed = 1;
+nodes = (
 (332,1050,o),
 (467,1329,o),
 (612,1329,qs),
@@ -2221,16 +2338,9 @@ nodes = (
 (897,416,o),
 (759,135,o),
 (612,135,qs),
-(467,135,o)
-);
-},
-{
-closed = 1;
-nodes = (
-(208,349,l),
-(321,250,l),
-(1011,1097,l),
-(897,1195,l)
+(467,135,o),
+(332,415,o),
+(332,733,qs)
 );
 }
 );
@@ -6743,6 +6853,7 @@ unicode = 109;
 },
 {
 glyphname = n;
+lastChange = "2023-08-07 11:46:26 +0000";
 layers = (
 {
 layerId = m01;
@@ -47713,6 +47824,28 @@ width = 1229;
 );
 note = uni0163;
 unicode = 355;
+},
+{
+export = 0;
+glyphname = _slash.zero;
+lastChange = "2023-08-07 11:47:45 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(191,394,l),
+(344,273,l),
+(1014,1119,l),
+(861,1240,l)
+);
+}
+);
+width = 1229;
+}
+);
 }
 );
 instances = (
