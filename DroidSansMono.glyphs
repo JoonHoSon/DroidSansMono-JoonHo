@@ -1069,6 +1069,7 @@ sub f f l by f_f_l;
 sub f i by fi;
 sub f l by fl;
 ";
+disabled = 1;
 tag = liga;
 }
 );
